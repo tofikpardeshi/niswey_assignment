@@ -68,7 +68,7 @@ class ContactController extends Controller
         }
         if ($contact->first_name == $request->first_name && $contact->last_name == $request->last_name && $contact->phone == $request->phone)
         {
-            return redirect()->route('home')->with('status', 'Data Not Updated');
+            return redirect()->route('home')->with('status', 'No Data Updated');
         }
         $contact->first_name = $request->first_name;
         $contact->last_name = $request->last_name;
